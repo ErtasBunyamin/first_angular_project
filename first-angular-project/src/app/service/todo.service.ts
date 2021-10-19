@@ -14,7 +14,7 @@ export class TodoService {
     }
 
     removeTodo(item: TodoModel) {
-        this.todoList = this.todoList.filter(p=>p.description !== item.description && p.action !==item.action);
+        this.todoList = this.todoList.filter(p=>p !== item);
         this.updateNotify.next();
     }
 
